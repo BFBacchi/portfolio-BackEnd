@@ -5,20 +5,18 @@
 package com.portfolio.portfoliobackend.Security.Entity;
 
 import com.portfolio.portfoliobackend.Security.Enums.RolNombre;
-import com.sun.istack.NotNull;
+
+import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import org.hibernate.annotations.Entity;
-
-import org.springframework.data.annotation.Id;
-
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
-
-
 public class Rol {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -26,6 +24,7 @@ public class Rol {
     @Enumerated(EnumType.STRING)
     private RolNombre rolNombre;
 
+    //Constructor
     public Rol() {
     }
 
@@ -33,6 +32,7 @@ public class Rol {
         this.rolNombre = rolNombre;
     }
 
+    //Getters & Setters    
     public int getId() {
         return id;
     }
@@ -48,6 +48,5 @@ public class Rol {
     public void setRolNombre(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
-    
-    
+
 }

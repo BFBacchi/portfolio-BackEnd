@@ -19,6 +19,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Usuario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -35,6 +36,7 @@ public class Usuario {
     @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
     private Set<Rol> roles = new HashSet<>();
 
+    //Constructor
     public Usuario() {
     }
 
@@ -45,6 +47,7 @@ public class Usuario {
         this.password = password;
     }
 
+    //Getters & Setters
     public int getId() {
         return id;
     }
@@ -92,7 +95,5 @@ public class Usuario {
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
-    
-    
-    
+
 }

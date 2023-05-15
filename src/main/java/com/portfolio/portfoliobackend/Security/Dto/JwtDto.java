@@ -9,7 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 public class JwtDto {
     private String token;
-    private String bearer = "Bearers";
+    private String bearer = "Bearer";
     private String nombreUsuario;
     private Collection<? extends GrantedAuthority> authorities; 
 

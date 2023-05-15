@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfolio.portfoliobackend.Security.Jwt;
 
 import java.io.IOException;
@@ -15,7 +11,8 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
 @Component
-public  class JwtEntryPoint implements AuthenticationEntryPoint{
+public class JwtEntryPoint implements AuthenticationEntryPoint {
+
     private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
 
     @Override
