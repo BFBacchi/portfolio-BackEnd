@@ -1,1 +1,0 @@
-fotoSELECT * FROM portfolio.usuario;
