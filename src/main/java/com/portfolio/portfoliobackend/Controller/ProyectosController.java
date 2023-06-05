@@ -28,6 +28,7 @@ public class ProyectosController {
     ProyectosService sProyectos;
 
     @GetMapping("/lista")
+    
     public ResponseEntity<List<Proyectos>> list() {
         List<Proyectos> list = sProyectos.list();
         return new ResponseEntity(list, HttpStatus.OK);

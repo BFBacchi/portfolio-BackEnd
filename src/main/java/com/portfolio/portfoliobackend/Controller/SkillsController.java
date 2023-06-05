@@ -5,6 +5,7 @@ import com.portfolio.portfoliobackend.Entity.Skills;
 import com.portfolio.portfoliobackend.Security.Controller.Mensaje;
 import com.portfolio.portfoliobackend.Service.SkillsService;
 import java.util.List;
+import javax.annotation.security.PermitAll;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,6 +29,7 @@ public class SkillsController {
     SkillsService sSkills;
 
     @GetMapping("/lista")
+    @PermitAll
     public ResponseEntity<List<Skills>> list() {
         List<Skills> list = sSkills.list();
         return new ResponseEntity(list, HttpStatus.OK);
